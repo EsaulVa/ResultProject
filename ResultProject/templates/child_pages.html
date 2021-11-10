@@ -1,0 +1,114 @@
+{% extends "main_index.html" %}
+{% block content %}
+    <script>
+    function ShowCard_2() {
+        $("#Card_2").show();
+    }
+
+    function ShowCard_3() {
+        $("#Card_3").show();
+    }
+
+    $(document).ready(function () {
+        $("#Card_2").hide();
+        $("#Card_3").hide();
+    });
+</script>
+<style>
+    .list-group-item:hover {
+        background-color: #7BA7AB;
+    }
+    .list-group-item:active{
+        background-color: red;
+    }
+</style>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-horizontal">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><span class="span">Записаться</span></li>
+                <li class="list-group-item">Математика</li>
+                <li class="list-group-item">ЕГЭ</li>
+                <li class="list-group-item">Индивидуально</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Выбор предмета</h5>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Математика
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Информатика
+                            </label>
+                        </div>
+                    </div>
+                    <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего
+                        основную часть содержимого карточки.</p>
+                    <a href="#" class="btn btn-primary"><span onclick="ShowCard_2(this)">Выбор<span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" aria-hidden="true" id="Card_2">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Уровень подготовки</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span onclick="alert('AAAA')">ЕГЭ</span></li>
+                        <li class="list-group-item"><span onclick="alert('AAAA')">ОГЭ</span></li>
+                        <li class="list-group-item"><span onclick="alert('AAAA')">1й класс</span></li>
+                        <li class="list-group-item"><span onclick="alert('AAAA')">1й класс</span></li>
+                    </ul>
+                    <a href="#" class="btn btn-primary"><span onclick="ShowCard_3(this)">Выбор<span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" aria-hidden="true" id="Card_3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Тип занятий</h5>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" checked>
+                                Индивидуально
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                В группе
+                            </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    2 человека
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    3 человека
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
